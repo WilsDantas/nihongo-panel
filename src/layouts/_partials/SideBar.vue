@@ -39,8 +39,7 @@ export default {
       links: [
         ["mdi-view-dashboard", "Dashboard", "/dashboard"],
         ["mdi-dialpad", "Categories", "/category"],
-        ["mdi-clipboard-outline", "Option 2", "/option2"],
-        ["mdi-call-split", "Option 3", "/option3"],
+        ["mdi-clipboard-outline", "Kana", "/kana"],
       ],
     };
   },

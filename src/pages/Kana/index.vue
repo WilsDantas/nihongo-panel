@@ -11,18 +11,26 @@
             hide-details
             class="mr-6"
           ></v-text-field>
-          <StoreDialogComponent :params=params />
+          <StoreDialogComponent :params="params" />
         </v-toolbar>
       </template>
       <template v-slot:default>
         <thead>
           <tr>
-            <th class="text-left">Name</th>
+            <th class="text-left">Image</th>
+            <th class="text-left">Traits</th>
+            <th class="text-left">Meaning</th>
+            <th class="text-left">Example</th>
+            <th class="text-left">Furigana</th>
             <th class="text-left"></th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="item in categories.data" :key="item.name">
+            <td>{{ item.name }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.name }}</td>
             <td>{{ item.name }}</td>
             <td align="end">
               <v-icon small @click="openDialog(item, true)">
@@ -38,16 +46,28 @@
 
       <template v-slot:bottom>
         <div class="text-center pb-3">
-          <v-pagination v-model="params.page" :length="categories.meta.last_page" circle></v-pagination>
+          <v-pagination
+            v-model="params.page"
+            :length="categories.meta.last_page"
+            circle
+          ></v-pagination>
         </div>
       </template>
     </v-simple-table>
 
     <v-dialog v-model="dialogModalEdit" width="300">
-      <EditDialogComponent :item="itemModal" :params=params @changemodal="closeDialog()" />
+      <EditDialogComponent
+        :item="itemModal"
+        :params="params"
+        @changemodal="closeDialog()"
+      />
     </v-dialog>
     <v-dialog v-model="dialogModalDestroy" width="300">
-      <DestroyDialogComponent :item="itemModal" :params=params @changemodal="closeDialog()" />
+      <DestroyDialogComponent
+        :item="itemModal"
+        :params="params"
+        @changemodal="closeDialog()"
+      />
     </v-dialog>
   </v-container>
 </template>

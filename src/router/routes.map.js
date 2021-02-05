@@ -2,8 +2,7 @@ import Login from '@/pages/Login'
 
 import Dashboard from '@/pages/Dashboard'
 import Category from '@/pages/Category'
-import Option2 from '@/pages/Option2'
-import Option3 from '@/pages/Option3'
+import Kana from '@/pages/Kana'
 const routes = [
     {
         path: '/',
@@ -40,19 +39,11 @@ const routes = [
                 }
             },
             {
-                path: '/option2',
-                component: Option2,
-                name: 'option2',
+                path: '/kana',
+                component: Kana,
+                name: 'kana',
                 meta: {
-                    title: 'Option2 - Tsuru'
-                }
-            },
-            {
-                path: '/option3',
-                component: Option3,
-                name: 'option3',
-                meta: {
-                    title: 'Option3 - Tsuru'
+                    title: 'Kana - Tsuru'
                 }
             },
         ]
